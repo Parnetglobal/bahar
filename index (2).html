@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>Bahar ❤️</title>
+<meta name="theme-color" content="#FFF3F7" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Bahar ❤️" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFF3F7'/><text x='50' y='54' font-size='58' text-anchor='middle' dominant-baseline='central'>❤️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pembe:#FF7BA9; --pembe-koyu:#E8578C; --pembe-soft:#FFD3E2; --ink:#5C3448; --kar:#FFFFFF;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none;}
+html,body{height:100%; margin:0; overflow:hidden;}
+body{
+  background:linear-gradient(170deg,#FFF7FA 0%, #FFE9F1 100%);
+  color:var(--ink); font-family:'Quicksand', system-ui, -apple-system, sans-serif;
+  display:flex; justify-content:center; align-items:flex-start;
+  padding:16px 14px calc(16px + env(safe-area-inset-bottom));
+  min-height:100dvh; transition:background 2.5s ease;
+}
+body.finalMod{background:linear-gradient(170deg,#FFF0F5 0%, #FFE4EE 100%);}
+
+.app{width:100%; max-width:400px; display:flex; flex-direction:column; min-height:calc(100dvh - 32px);}
+.cizgi{height:6px; border-radius:99px; background:var(--pembe-soft); margin:4px 0 16px; overflow:hidden;}
+.cizgi i{display:block; height:100%; width:0; border-radius:99px;
+  background:linear-gradient(90deg,#FFB0CC,var(--pembe)); transition:width .6s cubic-bezier(.3,1.2,.5,1);}
+
+h2{font-size:23px; font-weight:700; margin:0 0 4px; text-align:center;}
+.alt{font-size:14px; opacity:.65; margin:0 0 16px; text-align:center; line-height:1.5;}
+.orta{flex:1; display:flex; flex-direction:column; justify-content:center; gap:12px;}
+
+.btn{font-family:inherit; font-weight:700; font-size:17px; border:none; border-radius:99px;
+  padding:15px 26px; cursor:pointer; width:100%; color:#fff;
+  background:linear-gradient(135deg,#FF9CBE,var(--pembe));
+  box-shadow:0 5px 16px rgba(255,123,169,.4); transition:transform .15s ease;}
+.btn:active{transform:scale(.97);}
+:focus-visible{outline:3px solid var(--pembe); outline-offset:3px;}
+
+.secenek{font-family:inherit; font-weight:600; font-size:16px; border:2px solid var(--pembe-soft);
+  background:var(--kar); color:var(--ink); border-radius:20px; padding:16px; width:100%;
+  cursor:pointer; margin-bottom:10px; transition:all .3s ease; box-shadow:0 3px 10px rgba(255,123,169,.12);}
+.secenek:active{transform:scale(.98);}
+.secenek.dogru{background:linear-gradient(135deg,#FFDCE9,#FFC7DC); border-color:var(--pembe); transform:scale(1.03);}
+.secenek.sonuk{opacity:.3;}
+
+.kutu{background:var(--kar); border-radius:24px; padding:22px 20px; text-align:center;
+  box-shadow:0 6px 22px rgba(255,123,169,.18); font-size:17px; line-height:1.55; font-weight:600;
+  animation:belir .5s ease backwards;}
+@keyframes belir{from{opacity:0; transform:translateY(14px)}to{opacity:1; transform:none}}
+
+/* bölüm 1 */
+.skor{display:flex; justify-content:space-between; align-items:center; font-weight:700; font-size:16px; margin-bottom:10px;}
+.sayac{background:var(--kar); padding:5px 16px; border-radius:99px; box-shadow:0 3px 10px rgba(255,123,169,.18);}
+.sayac.az{color:var(--pembe-koyu);}
+.alan{position:relative; flex:1; min-height:320px; border-radius:26px; overflow:hidden;
+  background:linear-gradient(180deg,#FFFFFF,#FFF2F7); box-shadow:inset 0 0 0 2px rgba(255,211,226,.7); touch-action:manipulation;}
+.suzul{position:absolute; bottom:-70px; animation:yukari linear forwards;}
+@keyframes yukari{to{transform:translateY(-115vh);}}
+.hd{border:none; background:none; padding:10px; font-size:34px; cursor:pointer; animation:salin 2.4s ease-in-out infinite;}
+@keyframes salin{0%,100%{transform:translateX(-11px)}50%{transform:translateX(11px)}}
+.balon{position:absolute; font-weight:700; font-size:15px; pointer-events:none; color:var(--pembe-koyu);
+  white-space:nowrap; animation:cikart 1.1s ease-out forwards; transform:translate(-50%,-50%);}
+@keyframes cikart{0%{opacity:1}100%{opacity:0; transform:translate(-50%,-160%)}}
+
+/* kalbimi bul */
+.bes{display:flex; justify-content:center; gap:6px; flex-wrap:wrap; margin:10px 0 4px;}
+.mini{border:none; background:none; font-size:38px; padding:10px; cursor:pointer; transition:all .5s ease; opacity:.75;}
+.mini.kayip{opacity:0; transform:scale(.4);}
+.mini.gercek{opacity:1; font-size:76px; animation:atis 1.4s ease-in-out infinite;}
+@keyframes atis{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+
+/* hikaye kapısı */
+.kapi{border:none; cursor:pointer; width:100%; border-radius:28px; padding:42px 24px; text-align:center;
+  background:linear-gradient(150deg,#FFFFFF,#FFEDF4); color:var(--ink); font-family:inherit;
+  box-shadow:0 8px 28px rgba(255,123,169,.22); animation:nefesKapi 3.2s ease-in-out infinite;}
+@keyframes nefesKapi{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.kapi .em{font-size:52px; display:block; margin-bottom:10px;}
+.kapi b{font-size:21px; display:block;}
+.kapi i{font-style:normal; font-size:13px; opacity:.6;}
+.hikSatir{background:none; box-shadow:none; padding:12px 6px; font-size:18px; line-height:1.6;
+  animation:belir 1.2s ease backwards;}
+
+/* ══ FİNAL ══ */
+.final{position:fixed; inset:0; z-index:60; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; padding:30px 26px;
+  background:radial-gradient(circle at 50% 45%, #FFF4F8 0%, #FFE6EF 55%, #FFDCE9 100%);
+  opacity:0; animation:finalAc 2.6s ease forwards;}
+@keyframes finalAc{to{opacity:1}}
+.parlak{position:absolute; top:50%; left:50%; width:230px; height:230px; margin:-115px 0 0 -115px;
+  border-radius:50%; background:radial-gradient(circle, rgba(255,155,190,.42), transparent 68%);
+  filter:blur(26px); animation:glow 5.5s ease-in-out infinite;}
+@keyframes glow{0%,100%{transform:scale(1); opacity:.55}50%{transform:scale(1.3); opacity:.85}}
+.kalp{font-size:8px; line-height:1; color:#FF9DBE; z-index:2; animation:buyu 3.4s ease forwards;
+  text-shadow:0 6px 26px rgba(255,140,180,.5);}
+@keyframes buyu{0%{font-size:8px; opacity:.5}35%{font-size:34px; opacity:.85}100%{font-size:78px; opacity:1}}
+.kalp.nefes{animation:nefes 4.6s ease-in-out infinite;}
+@keyframes nefes{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+.kalp.son{font-size:104px; transition:font-size 2.6s ease;}
+.zerre{position:absolute; border-radius:50%; background:#FFB6D0; opacity:0; z-index:1;}
+@keyframes dolan{0%{opacity:0; transform:translate(0,0) scale(.6)}25%{opacity:.75}100%{opacity:0; transform:translate(var(--dx),var(--dy)) scale(1.1)}}
+.suzulen{position:absolute; font-size:15px; color:#FFA9C8; opacity:0; z-index:1; pointer-events:none;}
+@keyframes yuk{0%{opacity:0; transform:translateY(0) scale(.8)}20%{opacity:.7}100%{opacity:0; transform:translateY(-130px) scale(1.05)}}
+.satir{margin-top:38px; min-height:74px; text-align:center; z-index:3; font-size:19px; font-weight:600;
+  line-height:1.6; color:#8A4A67; display:flex; align-items:center; justify-content:center; padding:0 6px;}
+.satir span{animation:yaz 1.6s ease forwards;}
+@keyframes yaz{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:none}}
+.satir.buyuk span{font-size:26px; font-weight:700; color:var(--pembe-koyu); line-height:1.45;}
+.imza{margin-top:16px; font-size:16px; font-weight:600; color:#B06E8B; z-index:3; opacity:0; animation:yaz 2s ease .6s forwards;}
+
+/* ══ ÇUBUK KALP ══ */
+.cubukSahne{position:fixed; inset:0; z-index:70; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:6px;
+  background:radial-gradient(circle at 50% 45%, #FFF6FA 0%, #FFE7F0 60%, #FFDAE8 100%);
+  opacity:0; animation:finalAc 2.2s ease forwards;}
+.cubukKalp{position:relative; width:290px; height:270px;}
+.cubukKalp.vur{animation:tekAtis 1.15s cubic-bezier(.3,1.5,.5,1);}
+@keyframes tekAtis{0%{transform:scale(1)}28%{transform:scale(1.19)}55%{transform:scale(.97)}100%{transform:scale(1)}}
+.cubuk{position:absolute; width:4px; height:15px; margin:-7px 0 0 -2px; border-radius:99px;
+  background:linear-gradient(180deg,#FFA6C6,#FF6FA0); box-shadow:0 0 9px rgba(255,130,175,.65);
+  opacity:0; transform:scale(.2); transition:opacity 1.1s ease, transform 1.3s cubic-bezier(.2,.9,.3,1);}
+.sonYazi{font-size:20px; font-weight:700; color:#B0567E; opacity:0; z-index:2; text-align:center;
+  transition:opacity 1.6s ease; margin-top:4px;}
+.sonYazi.gor{opacity:1;}
+
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}}
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+  <div class="cizgi"><i id="ilerleme"></i></div>
+  <div id="sahne" style="flex:1; display:flex; flex-direction:column;"></div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   METİNLER — hepsini buradan değiştirebilirsin
+   ═══════════════════════════════════════════════════════════ */
+const AD = "Bahar";
+const IMZA = "— Poyraz";
+
+/* Soru bölümleri. dogru: vurgulanacak şık (null = hepsi aynı) */
+const S = {
+  aclik: { baslik:"Çok Kısa Soru 😂", soru:"Bahar'ın açlık seviyesi?",
+    secenekler:["%20","%50","%100 🍫"], dogru:2,
+    cevaplar:["Yüksek ihtimalle şu anda mutfakta bir şey arıyorsun. 😂"] },
+
+  kahve: { baslik:"Çok Kısa Soru ☕", soru:"Poyraz'ın kahve seviyesi?",
+    secenekler:["%20","%60","Çalışması için kahve gerekli. 💀"], dogru:2,
+    cevaplar:["Poyraz'ın işletim sistemi: ☕"] },
+
+  sevgi: { baslik:"Çok Kısa Soru ❤️", soru:"Poyraz'ın Bahar'ı sevme seviyesi?",
+    secenekler:["%50","%100","♾️"], dogru:2,
+    cevaplar:["HATA: Sevgi kapasitesi aşıldı. ❤️"] },
+
+  seviyorMu: { baslik:"Önemli Soru ❤️", soru:"Beni seviyor musun?",
+    secenekler:["Evet ❤️","Evet tabii ki ❤️"], dogru:null,
+    cevaplar:["Doğru cevap. 😌","Zaten başka şık koymadım."] },
+
+  netflix: { baslik:"İstatistik 📊", soru:"Bahar Netflix'te kaç dizi izlemiştir?",
+    secenekler:["10 civarı","50 civarı","Sayamam 🍿"], dogru:2,
+    cevaplar:["Hesaplanıyor...","HATA: Bahar'ın izlemediği dizi sayısı bulunamadı. 🍿"] },
+
+  asik: { baslik:"Bir Soru Daha 🌙", soru:"Sana niye aşık oldum, biliyor musun?",
+    secenekler:["Bilmiyorum 🙈","Söyle bakalım","Tahmin edeyim mi?"], dogru:null,
+    cevaplar:["Çünkü fazla güzelsin.","Fazla derin, fazla anlamlı bakıyorsun.","İşte öyle. ❤️"] },
+
+  nerede: { baslik:AD + " Nerede? 🕵️‍♀️", soru:AD + " şu anda ne yapıyor?",
+    secenekler:["🛋️","📱","🍫","🛏️"], dogru:null, buyuk:true,
+    cevaplar:["YANLIŞ 😂","Sevgilim sen uyuyorsun. 😴❤️","Ben seni tanıyorum."] }
+};
+
+/* HİKAYE — burayı kendi cümlelerinle doldur, en çok bu bölüm vurur */
+const HIKAYE = [
+  "Seninle tanıştığım gün sıradan bir gündü.",
+  "Sonra sen konuşmaya başladın.",
+  "O günden sonra hiçbir şey sıradan olmadı.",
+  "Ne zaman kötü bir gün geçirsem,",
+  "aklıma ilk sen geliyorsun.",
+  "Bu kadar basit aslında."
+];
+
+const FINAL_SATIRLAR = [
+  { t:"Bitti sandın...", bekle:2600 },
+  { t:"Ama sana söylemek istediğim bir şey vardı. ❤️", bekle:2800 },
+  { t:"İyi ki varsın " + AD + ".", bekle:2800 },
+  { t:"Seninle gülmek...", bekle:2200 },
+  { t:"Seninle saçmalamak...", bekle:2200 },
+  { t:"Seninle geçirdiğim küçük anlar...", bekle:2400 },
+  { t:"Benim için çok güzel.", bekle:2800 },
+  { t:"SENİ ÇOK SEVİYORUM GÜZELİM. ❤️", bekle:9500, buyuk:true }
+];
+/* ═══════════════════════════════════════════════════════════ */
+
+const sahne = document.getElementById("sahne");
+const cizgi = document.getElementById("ilerleme");
+let zaman = [];
+const bekle = (f,ms)=>{ const t=setTimeout(f,ms); zaman.push(t); return t; };
+const tekrar = (f,ms)=>{ const t=setInterval(f,ms); zaman.push(t); return t; };
+function temizle(){ zaman.forEach(t=>{clearTimeout(t); clearInterval(t);}); zaman=[]; }
+function titre(p){ try{ navigator.vibrate && navigator.vibrate(p); }catch(e){} }
+
+/* ───────── AKIŞ ───────── */
+const ADIMLAR = [
+  ()=>bolumKalpler(),
+  ()=>soru(S.aclik),
+  ()=>soru(S.kahve),
+  ()=>soru(S.seviyorMu),
+  ()=>soru(S.nerede),
+  ()=>soru(S.netflix),
+  ()=>soru(S.sevgi),
+  ()=>soru(S.asik),
+  ()=>kalbimiBul(),
+  ()=>hikayeKapisi(),
+  ()=>final()
+];
+let adim = -1;
+function sonraki(){
+  temizle();
+  adim++;
+  cizgi.style.width = Math.round(adim / (ADIMLAR.length-1) * 100) + "%";
+  ADIMLAR[adim]();
+}
+
+/* ───────── GİRİŞ ───────── */
+function giris(){
+  sahne.innerHTML =
+    '<div class="orta">' +
+      '<div style="text-align:center; font-size:62px">💗</div>' +
+      '<h2>Merhaba ' + AD + '</h2>' +
+      '<p class="alt">Sana küçük bir şey hazırladım.<br>Kısa bölümler, sonuna kadar git.</p>' +
+      '<button class="btn" id="bas">Başla ❤️</button>' +
+    '</div>';
+  document.getElementById("bas").onclick = sonraki;
+}
+
+/* ───────── 1 — KALPLERİ TOPLA ───────── */
+const IYI = ["❤️","💖","💗","💝","💕","✨"];
+function bolumKalpler(){
+  let skor = 0, sure = 15;
+  sahne.innerHTML =
+    '<h2>Kalpleri Topla ❤️</h2>' +
+    '<p class="alt">Parlak kalplere dokun. Kırık kalbe dokunma.</p>' +
+    '<div class="skor"><span id="sk">0 ❤️</span><span class="sayac" id="sr">15</span></div>' +
+    '<div class="alan" id="alan"></div>';
+  const alan = document.getElementById("alan"), sk = document.getElementById("sk"), sr = document.getElementById("sr");
+
+  tekrar(()=>{
+    sure--;
+    if(sure <= 0){ temizle(); kalplerSon(skor); return; }
+    sr.textContent = sure;
+    if(sure <= 5) sr.classList.add("az");
+  }, 1000);
+
+  tekrar(()=>{
+    const kirik = Math.random() < .26;
+    const dis = document.createElement("div");
+    dis.className = "suzul";
+    dis.style.left = (8 + Math.random()*76) + "%";
+    dis.style.animationDuration = (4.2 + Math.random()*2.2) + "s";
+    const b = document.createElement("button");
+    b.className = "hd";
+    b.textContent = kirik ? "💔" : IYI[Math.floor(Math.random()*IYI.length)];
+    b.style.animationDuration = (1.8 + Math.random()*1.6) + "s";
+    b.onclick = (e)=>{
+      const r = alan.getBoundingClientRect();
+      const x = (e.clientX || r.left+r.width/2) - r.left, y = (e.clientY || r.top+r.height/2) - r.top;
+      if(kirik){ skor = Math.max(0, skor-5); balon(alan,x,y, Math.random()<.5 ? AD.toUpperCase()+" 😭" : "Bu kalp kırıktı."); titre(90); }
+      else { skor += 10; balon(alan,x,y,"+10 ❤️"); titre(12); }
+      sk.textContent = skor + " ❤️";
+      dis.remove();
+    };
+    dis.appendChild(b); alan.appendChild(dis);
+    bekle(()=>dis.remove(), 6600);
+  }, 620);
+}
+function balon(alan,x,y,metin){
+  const s = document.createElement("span");
+  s.className = "balon"; s.textContent = metin;
+  s.style.left = x+"px"; s.style.top = y+"px";
+  alan.appendChild(s); setTimeout(()=>s.remove(), 1150);
+}
+function kalplerSon(skor){
+  sahne.innerHTML =
+    '<h2>Kalpleri Topla ❤️</h2>' +
+    '<div class="orta">' +
+      '<div class="kutu"><div style="font-size:44px;margin-bottom:8px">😌</div>' +
+      '<div style="font-size:30px;font-weight:700;color:var(--pembe-koyu)">' + skor + ' ❤️</div>' +
+      '<p style="margin:10px 0 0">Fena değilsin güzelim 😌❤️</p></div>' +
+      '<button class="btn" id="d">Devam →</button>' +
+    '</div>';
+  document.getElementById("d").onclick = sonraki;
+}
+
+/* ───────── GENEL SORU BÖLÜMÜ ───────── */
+function soru(q){
+  sahne.innerHTML =
+    '<h2>' + q.baslik + '</h2>' +
+    '<div class="orta" id="ic">' +
+      '<div class="kutu" style="font-size:19px; font-weight:700">' + q.soru + '</div>' +
+      '<div style="margin-top:6px">' +
+        q.secenekler.map((c,k)=>'<button class="secenek" data-k="'+k+'"' +
+          (q.buyuk ? ' style="font-size:34px; padding:20px"' : '') + '>'+c+'</button>').join("") +
+      '</div>' +
+    '</div>';
+
+  sahne.querySelectorAll(".secenek").forEach(b=>{
+    b.onclick = ()=>{
+      titre(12);
+      sahne.querySelectorAll(".secenek").forEach((x,k)=>{
+        x.disabled = true;
+        if(q.dogru !== null && q.dogru !== undefined) x.classList.add(k === q.dogru ? "dogru" : "sonuk");
+        else if(x !== b) x.classList.add("sonuk");
+      });
+      bekle(()=>{
+        const ic = document.getElementById("ic");
+        ic.innerHTML = "";
+        q.cevaplar.forEach((c,k)=>{
+          bekle(()=>{
+            const d = document.createElement("div");
+            d.className = "kutu";
+            d.style.marginTop = k ? "12px" : "0";
+            if(k === q.cevaplar.length-1) d.style.fontWeight = "700";
+            d.textContent = c;
+            ic.appendChild(d);
+          }, k*1500);
+        });
+        bekle(()=>{
+          const btn = document.createElement("button");
+          btn.className = "btn"; btn.style.marginTop = "16px"; btn.textContent = "Devam →";
+          btn.onclick = sonraki;
+          ic.appendChild(btn);
+        }, q.cevaplar.length*1500 + 300);
+      }, 800);
+    };
+  });
+}
+
+/* ───────── KALBİMİ BUL ───────── */
+function kalbimiBul(){
+  sahne.innerHTML =
+    '<h2>Kalbimi Bul ❤️</h2>' +
+    '<p class="alt">Beşinden biri gerçek. Hangisi sence?</p>' +
+    '<div class="orta">' +
+      '<div class="bes">' + [0,1,2,3,4].map(i=>'<button class="mini" aria-label="kalp '+(i+1)+'">🤍</button>').join("") + '</div>' +
+      '<div id="sonuc"></div>' +
+    '</div>';
+  sahne.querySelectorAll(".mini").forEach(b=>{
+    b.onclick = ()=>{
+      titre(14);
+      sahne.querySelectorAll(".mini").forEach(x=>{ x.disabled = true; if(x !== b) x.classList.add("kayip"); });
+      b.textContent = "❤️"; b.classList.add("gercek");
+      const sonuc = document.getElementById("sonuc");
+      bekle(()=>{ sonuc.innerHTML = '<div class="kutu" style="font-size:22px;font-weight:700">Buldun. ❤️</div>'; }, 900);
+      bekle(()=>{ sonuc.innerHTML += '<div class="kutu" style="margin-top:12px">Aslında benim kalbim zaten sende.</div>'; }, 2600);
+      bekle(()=>{
+        sonuc.innerHTML += '<button class="btn" id="d" style="margin-top:14px">Devam →</button>';
+        document.getElementById("d").onclick = sonraki;
+      }, 4400);
+    };
+  });
+}
+
+/* ───────── HİKAYE ───────── */
+function hikayeKapisi(){
+  sahne.innerHTML =
+    '<h2>Bir de şu var</h2><p class="alt">Acele etme, otur oku.</p>' +
+    '<div class="orta"><button class="kapi" id="ac">' +
+      '<span class="em">📖</span><b>Bizim Hikayemiz</b><i>dokun</i></button></div>';
+  document.getElementById("ac").onclick = ()=>{ titre(14); hikaye(); };
+}
+function hikaye(){
+  temizle();
+  sahne.innerHTML = '<div class="orta" id="ic" style="justify-content:center"></div>';
+  const ic = document.getElementById("ic");
+  HIKAYE.forEach((c,k)=>{
+    bekle(()=>{
+      const d = document.createElement("div");
+      d.className = "kutu hikSatir";
+      d.textContent = c;
+      ic.appendChild(d);
+    }, k*2100);
+  });
+  bekle(()=>{
+    const b = document.createElement("button");
+    b.className = "btn"; b.style.marginTop = "20px"; b.textContent = "Devam →";
+    b.onclick = sonraki;
+    ic.appendChild(b);
+  }, HIKAYE.length*2100 + 900);
+}
+
+/* ───────── FİNAL ───────── */
+function final(){
+  temizle();
+  document.body.classList.add("finalMod");
+  document.getElementById("app").style.display = "none";
+
+  const f = document.createElement("div");
+  f.className = "final";
+  f.innerHTML = '<div class="parlak"></div><div class="kalp" id="kalp">•</div>' +
+                '<div class="satir" id="satir"></div>' +
+                '<div class="imza" id="imza" style="display:none">' + IMZA + '</div>';
+  document.body.appendChild(f);
+
+  const kalp = document.getElementById("kalp"), satir = document.getElementById("satir");
+  bekle(()=>{ kalp.textContent = "♡"; }, 1300);
+  bekle(()=>{ kalp.textContent = "♥"; }, 2600);
+  bekle(()=>{ kalp.classList.add("nefes"); }, 3500);
+  tekrar(()=>zerre(f), 900);
+
+  let t = 3800;
+  FINAL_SATIRLAR.forEach(s=>{
+    bekle(()=>{
+      satir.classList.toggle("buyuk", !!s.buyuk);
+      satir.innerHTML = '<span>' + s.t + '</span>';
+      if(s.buyuk){
+        document.getElementById("imza").style.display = "block";
+        kalp.classList.add("son");
+        tekrar(()=>suzulenKalp(f), 1100);
+      }
+    }, t);
+    t += s.bekle;
+  });
+  bekle(()=>{ temizle(); f.style.transition = "opacity 2s ease"; f.style.opacity = "0";
+              setTimeout(()=>{ f.remove(); cubukKalp(); }, 2000); }, t);
+}
+function zerre(kap){
+  const d = document.createElement("div"); d.className = "zerre";
+  const c = 3 + Math.random()*4;
+  d.style.width = c+"px"; d.style.height = c+"px";
+  d.style.left = (50 + (Math.random()*40-20)) + "%";
+  d.style.top  = (46 + (Math.random()*30-15)) + "%";
+  d.style.setProperty("--dx", (Math.random()*90-45)+"px");
+  d.style.setProperty("--dy", (-40 - Math.random()*80)+"px");
+  d.style.animation = "dolan " + (5+Math.random()*3) + "s ease-out forwards";
+  kap.appendChild(d); setTimeout(()=>d.remove(), 8500);
+}
+function suzulenKalp(kap){
+  const s = document.createElement("span"); s.className = "suzulen";
+  s.textContent = ["♥","♡","❤"][Math.floor(Math.random()*3)];
+  s.style.left = (10+Math.random()*80)+"%"; s.style.bottom = (5+Math.random()*35)+"%";
+  s.style.fontSize = (11+Math.random()*12)+"px";
+  s.style.animation = "yuk " + (6+Math.random()*3) + "s ease-out forwards";
+  kap.appendChild(s); setTimeout(()=>s.remove(), 9500);
+}
+
+/* ───────── ÇUBUKLARLA KALP ───────── */
+function cubukKalp(){
+  const sah = document.createElement("div");
+  sah.className = "cubukSahne";
+  sah.innerHTML = '<div class="cubukKalp" id="ck"></div><div class="sonYazi" id="sy">Son ❤️</div>';
+  document.body.appendChild(sah);
+
+  const ck = document.getElementById("ck");
+  const W = 290, H = 270, cx = W/2, cy = H/2 + 12, sc = 8.4, N = 74;
+  const nok = [];
+  for(let i=0;i<N;i++){
+    const t = i / N * Math.PI * 2;
+    const x = 16*Math.pow(Math.sin(t),3);
+    const y = 13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t);
+    nok.push({ x: cx + x*sc, y: cy - y*sc });
+  }
+
+  nok.forEach((p,i)=>{
+    const n = nok[(i+1) % N];
+    const aci = Math.atan2(n.y - p.y, n.x - p.x) * 180/Math.PI + 90;
+    const c = document.createElement("div");
+    c.className = "cubuk";
+    c.style.left = cx + "px"; c.style.top = cy + "px";
+    c.style.transitionDelay = (i * 22) + "ms";
+    ck.appendChild(c);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      c.style.left = p.x + "px"; c.style.top = p.y + "px";
+      c.style.opacity = "1";
+      c.style.transform = "rotate(" + aci + "deg) scale(1)";
+    }));
+  });
+
+  const toplam = N*22 + 1300;
+  setTimeout(()=>{ ck.classList.add("vur"); try{navigator.vibrate&&navigator.vibrate([40,90,60]);}catch(e){} }, toplam + 700);
+  setTimeout(()=>{ document.getElementById("sy").classList.add("gor"); }, toplam + 2200);
+}
+
+giris();
+</script>
+</body>
+</html>
